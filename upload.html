@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>upload form</title>
+	<link rel="stylesheet" type="text/css" href="upload.css">
+	<script
+  src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+	<script
+  src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<!--SELECT BOX FOR UPLOAD PAGE -->
+<div class="wrapper">
+	<div class="title">
+		Select Category
+	</div>
+
+	<div class="select-wrap">
+		<ul class="default-option">
+			<li>
+				<div class="option Accomodation">
+					<div class="icon"></div>
+					<p>Accomodation</p>
+				</div>
+			</li>
+		</ul>
+			<ul class="select-ul">
+			<li>
+				<div class="option Electronics">
+					<div class="icon"></div>
+					<p>Electronics</p>
+				</div>
+			</li>
+			<li>
+				<div class="option Room">
+					<div class="icon"></div>
+					<p>Room Furnitures</p>
+				</div>
+			</li>
+			<li>
+				<div class="option Utensils">
+					<div class="icon"></div>
+					<p>Kitchen Utensils</p>
+				</div>
+			</li>
+			<li>
+				<div class="option Fashion">
+					<div class="icon"></div>
+					<p>Fashion</p>
+				</div>
+			</li>
+			<li>
+				<div class="option Beauty">
+					<div class="icon"></div>
+					<p>Health &Beauty</p>
+				</div>
+			</li>
+		</ul>
+		</div>
+	</div>
+
+	<script
+  src="http://code.jquery.com/jquery-3.5.1.min.js">
+	$(document).ready(function(){
+  		$(".default-option").click(function(){
+  			$(this).parent().toggleClass("active");
+  		})
+  	});
+
+</script>
+</body>
+</html>

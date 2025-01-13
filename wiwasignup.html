@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<link rel="stylesheet" type="text/css" href="wiwasignup.css">
+	<title>Signup</title>
+</head>
+<body>
+
+
+	<!--this is the sign up page-->
+	<div class="image">
+	<img src="LOGOWIWA- black.png" style="width:200px" "height:180px";>
+</div>
+	<div class="card">
+		<form>
+			<input type="text" name="fullname" placeholder="Fullname"><br>
+			<input type="Email" name="email" placeholder="Email"><br>
+			<input type="password" id="password" placeholder=" Create Password">
+			<progress max="100" value="0" id="strenght" style="width: 250px"  "background-color: #f9dc1f" "height:50px"></progress>
+			<br>
+
+			<input type="submit" name="submit" value="Sign Up"><br>
+
+			<p> Already have an account?<a href="login.html">Log in</a></p><br>
+			
+		</form>
+
+<script type="text/javascript">
+var pass = document.getElementById("password")
+pass.addEventListener('keyup', function() {
+	checkPassword(pass.value)
+})
+
+function checkPassword(password) {
+     var strenghtBar = document.getElementById("strenght")
+     var strenght = 0;
+     if (password.match(/[a-zA-Z0-9][a-zA-Z0-9]+/)) {
+     	strenght += 1
+     }
+     if (password.match(/[~<>?]+/)) {
+     	  strenght += 1
+     }
+     if (password.match(/[!@£$%^&*()]+/)) {
+     	  strenght += 1
+     }
+
+     if (password.lenght > 5) {
+     	 strenght += 1
+     }
+
+     switch(strenght){
+     	case 0:
+     	        strenghtBar.value = 20;
+     	        break
+     	case 1:
+     	        strenghtBar.value = 40;
+     	        break
+     	case 2:
+     	        strenghtBar.value = 60;
+     	        break   
+     	case 3:
+     	        strenghtBar.value = 80;
+     	        break
+     	case 4:
+     	        strenghtBar.value = 100;
+     	        break     
+
+     }
+}
+</script>
+</body>
+</html>
+
+
+

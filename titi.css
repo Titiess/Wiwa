@@ -1,0 +1,154 @@
+* body{
+	background-image: radial-gradient(#6f2d9c, #391353);
+	background-size: 4px 4px;
+	perspective: 400px;
+	width: 100%;
+	height: 600px;
+}
+.dropholder {
+	width: 322px;
+	height: 60px;
+	margin: 100px auto;
+	padding: 0 0 0 20px;
+	border-radius: 10px;
+	font:18px arial;
+	color: #fff;
+	position: relative;
+	box-sizing: border-box;
+	border:1px solid #9b8db9;
+	animation: move 3s ease-in-out;
+/*  position :relative;*/
+}
+.dropholder:hover,
+.dropholder:hover::after1{
+	animation-play-state: paused;
+}
+.dropholder::after{
+	content: "";
+	position:absolute;
+	width: 250px;
+	height: 5px;
+	background: rgba(0,0,0,0);
+	display: block;
+	top: 100px;
+	left: 37px;
+	margin: auto;
+	border-radius: 50%;
+	box-shadow: 0px 15px 10px rgba(0,0,0,.5);
+	animation: moveshadow 3s ease-in-out infinite;
+}
+p {
+	float: left;
+	line-height: 35px;
+}
+
+.dropdown > p {
+    font-size: 16px;
+}
+.dropdown,
+.dropholder{
+	background-image: linear-gradient(#da4df8, #9b0db9);
+}
+
+.dropdown{
+	margin-left: 20px;
+	float: left;
+	width: 208px;
+	padding: 0 0 0 20px;
+	border-radius: 0 10px 10px 0;
+	cursor: pointer;
+	height: 58px;
+	border-left: 1px solid #da4df8;
+	position: relative;
+}
+
+.dropdown:hover {
+	background-image: linear-gradient(#da4df8, #b11cd0);
+}
+
+.dropdown::after {
+	content: "v";
+	position: absolute;
+	font-size: 17px;
+	right: 20px;
+	top: 18px;
+	display: block;
+}
+ul {
+	position: absolute;
+	right: 0;
+	top: 50px;
+	width: 228px;
+	cursor: pointer;
+	transform-style: preserve-3d;
+	 transform:rotateY(180deg)
+	rotateX(5deg) translateY(100px);
+	backface-visibility: hidden;
+	background-image: linear-gradient(#4dc2f8, #0d82b9);
+	border: 2px solid #0d82b9;
+	border-radius: 10px;
+	transition: all .8s;
+	z-index: 5;
+	overflow: hidden;
+	padding: 3px;
+	opacity:0;
+
+}
+
+ul li {
+	padding: 10px;
+	border-bottom: 1px solid #fff;
+	color: #e8f8ff;
+	transition: all .3s;
+	list-style: none;
+}
+
+ul li:hover {
+	background: #61ccfd;
+	padding-left: 20px;
+}
+
+ul li:last-child {
+    border:none;
+}
+
+/*li > i {
+	float: left;
+	padding-top: 3px;
+	padding-right: 14px;
+}
+
+p > i {
+	position: relative;
+	top: 2px;
+	padding-right: 5px;
+}
+i{
+	opacity: .8;
+}
+*/
+.showMenu {
+	opacity: 1;
+	transform: rotateX(0deg)
+	translateY(0px);
+}
+
+@keyframes move {
+	0%, 100% {
+		transform: translateY(-10px)
+	}
+	50%{
+		transform: translateY(0px)
+	}
+}
+
+@keyframes moveShadow {
+	0%, 100% {
+		transform: translateY(10px);
+		opacity: .4;
+	}
+	50% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}

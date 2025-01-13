@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>select box</title>
+	<link rel="stylesheet" type="text/css" href="titi.css">
+
+</head>
+<body>
+
+
+	<div class="dropholder">
+		<p>select</p>
+		<div class="dropdown">
+		  <p>please</p>
+		</div>
+		<ul>
+			<li>ghivh</li>
+			<li>iopugou</li>
+			<li>khj?l</li>
+			<li>nkj'jkp;l</li>
+			<li>hgfl;/j</li>
+			<li>cgflgvh</li>
+		</ul>
+
+	</div>
+
+
+
+
+
+
+
+
+     <!--<script src="./jquery/jquery.js">
+     	
+     </script>-->
+
+     <script type="text/javascript">
+     	$(document).ready(function() {
+     		$(".dropdown").click(function(){
+
+     			$("ul").toggleclass("showMenu");
+     			$("ul > li").click(function() {
+     				$(".dropdown > p").html($(this).html(
+     					));
+     				$("ul").removeclass("showMenu");
+     			})
+     		})
+     	})
+     </script>
+
+</body>
+</html>
